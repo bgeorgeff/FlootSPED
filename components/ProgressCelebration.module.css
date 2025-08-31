@@ -1,0 +1,122 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--z-critical);
+  backdrop-filter: blur(4px);
+  animation: fadeIn var(--animation-duration-fast) ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal {
+  background-color: var(--popup);
+  color: var(--popup-foreground);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-12) var(--spacing-8);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  box-shadow: var(--shadow-lg);
+  animation: scaleIn var(--animation-duration-normal) cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.closeButton {
+  position: absolute;
+  top: var(--spacing-3);
+  right: var(--spacing-3);
+  color: var(--muted-foreground);
+}
+
+.iconWrapper {
+  margin: 0 auto var(--spacing-6);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-foreground);
+}
+
+.iconWrapper.achievement {
+  background-color: var(--success);
+}
+.iconWrapper.level-up {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+}
+.iconWrapper.streak {
+  background-color: var(--secondary);
+}
+
+.title {
+  font-family: var(--font-family-heading);
+  font-size: var(--text-size-3xl);
+  margin-bottom: var(--spacing-2);
+}
+
+.message {
+  color: var(--muted-foreground);
+  font-size: var(--text-size-lg);
+  margin-bottom: var(--spacing-8);
+}
+
+.continueButton {
+  width: 100%;
+}
+
+/* Confetti animation */
+.confetti {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.confettiPiece {
+  position: absolute;
+  width: 10px;
+  height: 20px;
+  background: var(--primary);
+  top: -10%;
+  opacity: 0;
+  animation: confetti-fall 5s ease-out infinite;
+}
+
+.confettiPiece:nth-child(2) { background: var(--secondary); animation-delay: 0.5s; }
+.confettiPiece:nth-child(3) { background: var(--accent); animation-delay: 1s; }
+.confettiPiece:nth-child(4) { background: var(--success); animation-delay: 1.5s; }
+.confettiPiece:nth-child(5) { background: var(--info); animation-delay: 2s; }
+.confettiPiece:nth-child(6) { background: var(--chart-color-3); animation-delay: 2.5s; }
+.confettiPiece:nth-child(7) { background: var(--chart-color-4); animation-delay: 3s; }
+.confettiPiece:nth-child(8) { background: var(--chart-color-5); animation-delay: 3.5s; }
+.confettiPiece:nth-child(9) { background: var(--warning); animation-delay: 4s; }
+.confettiPiece:nth-child(10) { background: var(--primary); animation-delay: 4.5s; }
+
+@keyframes confetti-fall {
+  0% { transform: translateY(0) rotateZ(0); opacity: 1; }
+  100% { transform: translateY(110vh) rotateZ(720deg); opacity: 0; }
+}
+
+.confettiPiece:nth-child(odd) { left: 10%; }
+.confettiPiece:nth-child(even) { left: 90%; }
+.confettiPiece:nth-child(3n) { left: 50%; animation-duration: 6s; }
+.confettiPiece:nth-child(4n) { left: 30%; animation-duration: 4s; }
+.confettiPiece:nth-child(5n) { left: 70%; animation-duration: 7s; }

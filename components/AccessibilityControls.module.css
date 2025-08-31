@@ -1,0 +1,99 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  padding: var(--spacing-4);
+  background-color: var(--surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  width: 320px;
+  font-family: var(--font-family-base);
+  color: var(--surface-foreground);
+}
+
+.title {
+  font-family: var(--font-family-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+  color: var(--foreground);
+}
+
+.controlGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.labelContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--muted-foreground);
+}
+
+.labelContainer label {
+  flex-grow: 1;
+  color: var(--foreground);
+}
+
+.icon {
+  flex-shrink: 0;
+}
+
+.valueLabel {
+  font-variant-numeric: tabular-nums;
+  background-color: var(--muted);
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.separator {
+  margin: 0;
+}
+
+.toggleGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.themeSelector {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-2);
+}
+
+.themeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  border-radius: var(--radius);
+  border: 2px solid var(--border);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all var(--animation-duration-fast) ease;
+  background-color: var(--bg);
+  color: var(--fg);
+  outline: none;
+}
+
+.themeButton:hover {
+  border-color: var(--primary);
+}
+
+.themeButton:focus-visible {
+  box-shadow: var(--shadow-focus);
+  border-color: var(--primary);
+}
+
+.themeButton.active {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px var(--primary);
+}

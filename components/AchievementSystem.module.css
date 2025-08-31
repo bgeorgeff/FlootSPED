@@ -1,0 +1,116 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+.categorySection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.categoryTitle {
+  font-family: var(--font-family-heading);
+  font-size: var(--text-size-2xl);
+  color: var(--foreground);
+  border-bottom: 2px solid var(--border);
+  padding-bottom: var(--spacing-2);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-6);
+}
+
+.card {
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-4);
+  display: flex;
+  gap: var(--spacing-4);
+  align-items: flex-start;
+  box-shadow: var(--shadow);
+  transition: transform var(--animation-duration-normal) ease, box-shadow var(--animation-duration-normal) ease;
+  border: 1px solid var(--border);
+}
+
+.card.unlocked {
+  background-color: color-mix(in srgb, var(--success) 10%, var(--surface));
+  border-color: color-mix(in srgb, var(--success) 20%, transparent);
+}
+
+.cardIcon {
+  flex-shrink: 0;
+  margin-top: var(--spacing-1);
+}
+
+.lockedIcon {
+  color: var(--muted-foreground);
+}
+
+.unlockedIcon {
+  color: var(--success);
+}
+
+.cardContent {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-2);
+}
+
+.cardTitle {
+  font-family: var(--font-family-heading);
+  font-size: var(--text-size-lg);
+  font-weight: 500;
+  color: var(--surface-foreground);
+}
+
+.cardDescription {
+  font-size: var(--text-size-sm);
+  color: var(--muted-foreground);
+  line-height: var(--line-height-normal);
+}
+
+.progressContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  margin-top: var(--spacing-2);
+}
+
+.progressText {
+  font-size: var(--text-size-sm);
+  color: var(--muted-foreground);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.shareButton {
+  margin-left: auto;
+  color: var(--muted-foreground);
+}
+
+.shareButton:hover {
+  color: var(--primary);
+}
+
+.error,
+.empty {
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-8);
+  text-align: center;
+  color: var(--muted-foreground);
+  font-size: var(--text-size-lg);
+}

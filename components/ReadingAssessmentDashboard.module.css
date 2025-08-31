@@ -1,0 +1,108 @@
+.dashboard {
+  padding: var(--spacing-8);
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-family-base);
+  min-height: 100vh;
+}
+
+.header {
+  margin-bottom: var(--spacing-8);
+}
+
+.title {
+  font-family: var(--font-family-heading);
+  font-size: var(--text-size-3xl);
+  font-weight: 700;
+  color: var(--surface-foreground);
+  margin-bottom: var(--spacing-2);
+}
+
+.subtitle {
+  font-size: var(--text-size-lg);
+  color: var(--muted-foreground);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-6);
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 3fr 1fr;
+  }
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.centeredMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--spacing-16) var(--spacing-8);
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  color: var(--muted-foreground);
+  min-height: 400px;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: var(--spacing-4);
+  color: var(--muted-foreground);
+}
+
+.error {
+  color: var(--error);
+  background-color: color-mix(in srgb, var(--error) 5%, transparent);
+  border: 1px solid color-mix(in srgb, var(--error) 20%, transparent);
+}
+
+.error .icon {
+  color: var(--error);
+}
+
+/* Skeleton styles from other components for a cohesive look */
+.card {
+  background-color: var(--card);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-6);
+  box-shadow: var(--shadow-md);
+  color: var(--card-foreground);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-6);
+  flex-wrap: wrap;
+  gap: var(--spacing-4);
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-8);
+}
+
+.chartContainer {
+  height: 350px;
+}

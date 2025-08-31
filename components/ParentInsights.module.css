@@ -1,0 +1,115 @@
+.card {
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-6);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.card h2 {
+  font-family: var(--font-family-heading);
+  font-size: var(--text-size-xl);
+  font-weight: 600;
+  color: var(--surface-foreground);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.encouragement {
+  background-color: color-mix(in srgb, var(--accent) 15%, transparent);
+  border-left: 4px solid var(--accent);
+  padding: var(--spacing-4);
+  border-radius: var(--radius);
+  position: relative;
+}
+
+.encouragement p {
+  margin: 0;
+  color: var(--accent-foreground);
+  font-style: italic;
+  line-height: var(--line-height-relaxed);
+}
+
+.quoteIcon {
+  position: absolute;
+  top: var(--spacing-3);
+  left: var(--spacing-3);
+  color: color-mix(in srgb, var(--accent) 50%, transparent);
+  opacity: 0.5;
+}
+
+.recommendations h3 {
+  font-family: var(--font-family-base);
+  font-size: var(--text-size-lg);
+  font-weight: 600;
+  margin-bottom: var(--spacing-4);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  color: var(--surface-foreground);
+}
+
+.recommendationList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+}
+
+.recommendationItem {
+  padding: var(--spacing-3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background-color: var(--background);
+}
+
+.recommendationItem h4 {
+  font-size: var(--text-size-base);
+  font-weight: 600;
+  margin: 0 0 var(--spacing-1) 0;
+  color: var(--primary);
+}
+
+.recommendationItem p {
+  font-size: var(--text-size-sm);
+  color: var(--muted-foreground);
+  margin: 0;
+}
+
+.noRecommendations {
+  font-size: var(--text-size-sm);
+  color: var(--muted-foreground);
+  text-align: center;
+  padding: var(--spacing-4);
+  background-color: var(--background);
+  border-radius: var(--radius-md);
+}
+
+.centeredMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: var(--spacing-2);
+  min-height: 200px;
+  color: var(--muted-foreground);
+}
+
+.centeredMessage .icon {
+  width: 32px;
+  height: 32px;
+  color: var(--muted-foreground);
+  margin-bottom: var(--spacing-2);
+}
+
+.centeredMessage h3 {
+  font-size: var(--text-size-lg);
+  font-weight: 600;
+  color: var(--foreground);
+}

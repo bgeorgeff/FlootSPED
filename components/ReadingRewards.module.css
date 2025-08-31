@@ -1,0 +1,151 @@
+.container {
+  width: 100%;
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-6);
+  box-shadow: var(--shadow-md);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-4);
+  flex-wrap: wrap;
+  gap: var(--spacing-4);
+}
+
+.title {
+  font-family: var(--font-family-heading);
+  font-size: var(--text-size-2xl);
+  color: var(--surface-foreground);
+}
+
+.pointsBalance {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  background-color: var(--muted);
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--radius-full);
+  font-weight: 500;
+  color: var(--muted-foreground);
+}
+
+.pointsValue {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.filters {
+  display: flex;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-6);
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: var(--spacing-4);
+}
+
+.filterButton {
+  text-transform: capitalize;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-4);
+}
+
+.card {
+  background-color: var(--background);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-4);
+  display: flex;
+  gap: var(--spacing-4);
+  align-items: flex-start;
+  border: 1px solid var(--border);
+  transition: box-shadow var(--animation-duration-normal) ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.card.unlocked {
+  background-color: color-mix(in srgb, var(--primary) 5%, var(--background));
+  border-color: color-mix(in srgb, var(--primary) 20%, transparent);
+}
+
+.cardIconWrapper {
+  flex-shrink: 0;
+  background-color: color-mix(in srgb, var(--secondary) 15%, transparent);
+  padding: var(--spacing-2);
+  border-radius: var(--radius);
+}
+
+.cardIcon {
+  color: var(--secondary);
+}
+
+.cardContent {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-2);
+}
+
+.cardTitle {
+  font-family: var(--font-family-base);
+  font-size: var(--text-size-lg);
+  font-weight: 500;
+  color: var(--surface-foreground);
+}
+
+.cardDescription {
+  font-size: var(--text-size-sm);
+  color: var(--muted-foreground);
+  line-height: var(--line-height-normal);
+  min-height: 40px; /* Ensure consistent height */
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--spacing-3);
+}
+
+.points {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-weight: 500;
+  color: var(--secondary);
+}
+
+.unlockedStatus {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-weight: 500;
+  color: var(--success);
+  font-size: var(--text-size-sm);
+}
+
+.error,
+.empty {
+  background-color: var(--background);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-6);
+  text-align: center;
+  color: var(--muted-foreground);
+  font-size: var(--text-size-base);
+  grid-column: 1 / -1;
+}
